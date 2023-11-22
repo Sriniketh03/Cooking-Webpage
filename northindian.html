@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>North Indian Cuisine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>North Indian Cuisine</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="southindian.html">South Indian</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="dynamic-content-container-north">
+        <h2>Popular Dishes</h2>
+        <ul>
+            <li><a href="#" class="dish" onclick="displayRecipe('butter-chicken')">Butter Chicken</a></li>
+            <li><a href="#" class="dish" onclick="displayRecipe('palak-paneer')">Palak Paneer</a></li>
+            <li><a href="#" class="dish" onclick="displayRecipe('chicken-biryani')">Chicken Biryani</a></li>
+        </ul>
+    </section>
+    <div id="recipe-container"></div>
+    <footer>
+        <p>&copy; C.Jaya Sriniketh</p>
+    </footer>
+
+    <script>
+        function displayRecipe(dish) {
+            let recipeContainer = document.getElementById('recipe-container');
+            let recipeHTML = '';
+
+            switch (dish) {
+                case 'butter-chicken':
+                    recipeHTML = `
+                        <div class="recipe">
+                            <h3>Butter Chicken</h3>
+                            <p>Ingredients:</p>
+                            <ul>
+                                <li>500g boneless chicken</li>
+                                <li>1 cup yogurt</li>
+                                <li>1 onion, finely chopped</li>
+                                <li>2 tomatoes, pureed</li>
+                                <li>1/2 cup cream</li>
+                            </ul>
+                            <p>Instructions:</p>
+                            <ol>
+                                <li>Marinate the chicken in yogurt and spices for 2 hours.</li>
+                                <li>Sauté onions until golden brown, add tomatoes.</li>
+                                <li>Add marinated chicken and cook until done.</li>
+                                <li>Stir in cream and simmer for 5 minutes.</li>
+                            </ol>
+                        </div>`;
+                    break;
+
+                case 'palak-paneer':
+                    recipeHTML = `
+                        <div class="recipe">
+                            <h3>Palak Paneer</h3>
+                            <p>Ingredients:</p>
+                            <ul>
+                                <li>250g paneer (cottage cheese)</li>
+                                <li>2 cups spinach, blanched and pureed</li>
+                                <li>1 onion, finely chopped</li>
+                                <li>1 tomato, chopped</li>
+                                <li>1/2 cup cream</li>
+                            </ul>
+                            <p>Instructions:</p>
+                            <ol>
+                                <li>Sauté onions until golden brown, add tomatoes.</li>
+                                <li>Add spinach puree and cook for 5 minutes.</li>
+                                <li>Add paneer and cream, simmer for another 5 minutes.</li>
+                            </ol>
+                        </div>`;
+                    break;
+
+                case 'chicken-biryani':
+                    recipeHTML = `
+                        <div class="recipe">
+                            <h3>Chicken Biryani</h3>
+                            <p>Ingredients:</p>
+                            <ul>
+                                <li>2 cups basmati rice</li>
+                                <li>500g chicken, marinated</li>
+                                <li>1 cup yogurt</li>
+                                <li>2 onions, thinly sliced</li>
+                                <li>Whole spices (bay leaves, cardamom, cinnamon)</li>
+                            </ul>
+                            <p>Instructions:</p>
+                            <ol>
+                                <li>Cook basmati rice and keep aside.</li>
+                                <li>Sauté onions until golden brown, add marinated chicken.</li>
+                                <li>Layer cooked rice and chicken, and steam until done.</li>
+                            </ol>
+                        </div>`;
+                    break;
+
+                default:
+                    break;
+            }
+
+            recipeContainer.innerHTML = recipeHTML;
+        }
+    </script>
+</body>
+</html>

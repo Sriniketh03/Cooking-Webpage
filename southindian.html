@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>South Indian Cuisine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>South Indian Cuisine</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="northindian.html">North Indian</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="dynamic-content-container-south">
+        <h2>Popular Dishes</h2>
+        <ul>
+            <li><a href="#" class="dish" onclick="displayRecipe('dosa')">Dosa</a></li>
+            <li><a href="#" class="dish" onclick="displayRecipe('idli')">Idli</a></li>
+            <li><a href="#" class="dish" onclick="displayRecipe('sambar')">Sambar</a></li>
+        </ul>
+    </section>
+    <div id="recipe-container"></div>
+    <footer>
+        <p>&copy; C.Jaya Sriniketh</p>
+    </footer>
+
+    <script>
+        function displayRecipe(dish) {
+            let recipeContainer = document.getElementById('recipe-container');
+            let recipeHTML = '';
+
+            switch (dish) {
+                case 'dosa':
+                    recipeHTML = `
+                        <div class="recipe">
+                            <h3>Dosa</h3>
+                            <p>Ingredients:</p>
+                            <ul>
+                                <li>1 cup rice</li>
+                                <li>1/2 cup urad dal</li>
+                                <li>1/4 cup fenugreek seeds</li>
+                                <li>Water, as needed</li>
+                            </ul>
+                            <p>Instructions:</p>
+                            <ol>
+                                <li>Soak rice, urad dal, and fenugreek seeds overnight.</li>
+                                <li>Grind into a smooth batter, let it ferment for 6-8 hours.</li>
+                                <li>Heat a skillet, pour batter to make a thin dosa.</li>
+                                <li>Cook until golden brown, fold, and serve.</li>
+                            </ol>
+                        </div>`;
+                    break;
+
+                case 'idli':
+                    recipeHTML = `
+                        <div class="recipe">
+                            <h3>Idli</h3>
+                            <p>Ingredients:</p>
+                            <ul>
+                                <li>1 cup idli rice</li>
+                                <li>1/2 cup urad dal</li>
+                                <li>Water, as needed</li>
+                            </ul>
+                            <p>Instructions:</p>
+                            <ol>
+                                <li>Soak rice and urad dal separately for 4-6 hours.</li>
+                                <li>Grind into a smooth batter, let it ferment for 8 hours.</li>
+                                <li>Pour batter into idli molds and steam for 10-12 minutes.</li>
+                                <li>Serve hot with sambar and chutney.</li>
+                            </ol>
+                        </div>`;
+                    break;
+
+                case 'sambar':
+                    recipeHTML = `
+                        <div class="recipe">
+                            <h3>Sambar</h3>
+                            <p>Ingredients:</p>
+                            <ul>
+                                <li>Toor dal</li>
+                                <li>Tamarind pulp</li>
+                                <li>Vegetables (carrot, beans, drumstick, etc.)</li>
+                                <li>Sambar powder</li>
+                            </ul>
+                            <p>Instructions:</p>
+                            <ol>
+                                <li>Cook toor dal until soft, mash it, and set aside.</li>
+                                <li>Boil vegetables with tamarind pulp and sambar powder.</li>
+                                <li>Add mashed dal, simmer, and season with mustard seeds and curry leaves.</li>
+                                <li>Serve hot with rice or idli.</li>
+                            </ol>
+                        </div>`;
+                    break;
+
+                default:
+                    break;
+            }
+
+            recipeContainer.innerHTML = recipeHTML;
+        }
+    </script>
+</body>
+</html>

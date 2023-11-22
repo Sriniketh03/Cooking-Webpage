@@ -1,0 +1,300 @@
+*{
+    margin: 50;
+    padding: 0;
+    font-family: Verdana;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(92, 68, 68, 0.75),rgba(113, 85, 85, 0.75)),url(food.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.forlogo{
+    width: 90%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 130px;
+    cursor: pointer;
+}
+.forlogo ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.forlogo ul li a{
+    text-decoration: none;
+    color: rgb(209, 154, 25);
+    text-transform: uppercase;
+}
+.forlogo ul li::after{
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: #c41b3a;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    transition: 0.2s;
+}
+.forlogo ul li:hover::after{
+    width: 100%;
+}
+.contents{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #dbcc28;
+}
+.contents h1{
+    font-size: 80px;
+    margin-top: 100px;
+}
+.contents p{
+    margin: 40px;
+    font-weight:100;
+    line-height: 20px;
+}
+.link{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    text-decoration: none;
+    color: #c8a61d;
+    font-size: 50px;
+    padding: 0 10px;
+}
+
+.link::before, .link::after{
+    content: '';
+    background: red;
+    width: 0;
+    height: 4px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 2px;
+    transition: width 0.2s;
+}
+.link::before{
+    right: 100%;
+}
+
+.link::after{
+    left: 100%;
+}
+
+.link:hover::before, .link:hover::after{
+    width: 40%;
+}
+
+
+
+.w3-display-bottomright::before{
+    content: '';
+    background: rgb(234, 135, 14);
+    width: 10;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 2px;
+    transition: width 0.2s;
+}
+.w3-display-bottomright::before{
+    right:0%;
+}
+
+.w3-display-bottomright:hover::before{
+    width:100%
+}
+
+/**/
+/**/
+/**/
+/* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: large;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: url('north.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: #000; 
+}/* style.css */
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Verdana', sans-serif;
+}
+
+header {
+    background: url('header-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #d02e2e;
+    padding: 10px;
+    text-align: center;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #e74c3c;
+}
+
+section {
+    padding: 20px;
+}
+
+footer {
+    background: url('footer-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #d72828;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Additional styling for specific elements on each cuisine page */
+
+/* North Indian Page */
+#dynamic-content-container-north {
+    background: url('north.jpeg') no-repeat center center fixed;
+    font-size: x-large;
+    background-size: cover;
+    color: #000;
+    padding: 20px;
+}
+
+#dynamic-content-container-north h2 {
+    color: #312424;
+}
+
+#dynamic-content-container-north ul {
+    list-style-type: none;
+}
+
+#dynamic-content-container-north li {
+    margin-bottom: 10px;
+}
+
+#dynamic-content-container-north a.dish {
+    text-decoration: none;
+    color: #dbbf34;
+    font-weight: bold;
+    font-size: x-large;
+    transition: color 0.3s ease;
+}
+
+#dynamic-content-container-north a.dish:hover {
+    color: #b94629;
+}
+
+/* South Indian Page */
+#dynamic-content-container-south {
+   /* background: url('south.jpg') no-repeat center center fixed;*/
+    background-size: cover;
+    font-size: x-large;
+    color: #5c4a4a;
+    padding: 20px;
+}
+
+#dynamic-content-container-south h2 {
+    color: rgb(47, 43, 46);
+}
+
+#dynamic-content-container-south ul {
+    list-style-type: none;
+}
+
+#dynamic-content-container-south li {
+    margin-bottom: 10px;
+}
+
+#dynamic-content-container-south a.dish {
+    text-decoration: none;
+    color: #ae3b27;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#dynamic-content-container-south a.dish:hover {
+    color: #219a52;
+}
+
+/* Recipe Display */
+#recipe-container {
+    margin-top: 20px;
+}
+
+.recipe {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.recipe h3 {
+    color: #e74c3c;
+}
+
+.recipe p {
+    color: #000;
+    font-style: italic;
+}
+
+/* Font Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#dynamic-content-container h1,
+#dynamic-content-container a.link {
+    animation: fadeIn 1s ease;
+}
+
+
+/*
+*/

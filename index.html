@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+    <div class='banner'>
+        <div class="forlogo">
+            <img src="logo.png" class="logo">
+            <ul>
+                <li><b><a href="northindian.html">North Indian</a></b></li>
+                <li><b><a href="southindian.html">South Indian</a></b></li>
+            </ul>
+        </div>
+        <div class="contents">  
+            <h1>Start Your Food Journey</h1>
+            <a href="#" class="link">-Anyone can cook</a>
+        </div>
+    </div>
+
+    <div id="dynamic-content-container"></div>
+
+    <script>
+        function loadContent(page) {
+            fetch(page)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('dynamic-content-container').innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('Error fetching content:', error);
+                });
+        }
+    </script>
+</body>
+</html>
